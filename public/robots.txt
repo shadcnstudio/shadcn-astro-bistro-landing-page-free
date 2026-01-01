@@ -1,0 +1,16 @@
+# robots.txt for Master Astro Template
+# Allow all crawlers to access all content
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap-index.xml
+
+# Block specific paths if needed (uncomment as needed)
+# Disallow: /api/
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl-delay (optional, only if needed)
+# Crawl-delay: 1

@@ -6,43 +6,101 @@ interface Props {
   description?: string
   ogImage?: string
   type?: 'website' | 'article'
+  keywords?: string
+  author?: string
+  twitterHandle?: string
+  publishedTime?: string
+  modifiedTime?: string
+  locale?: string
+  siteName?: string
+  schema?: Record<string, any>
 }
 
 const {
-  title = 'Default Site Title',
-  description = 'Default description for your website.',
+  title = 'Master Astro Template - Modern Web Development',
+  description = 'Build blazing-fast websites with Astro, shadcn/ui, and Tailwind CSS. Modern, performant, and SEO-optimized template for your next project.',
   ogImage,
-  type = 'website'
+  type = 'website',
+  keywords = 'astro, shadcn, tailwind, react, web development, template',
+  author = 'Your Name',
+  twitterHandle = '@yourhandle',
+  publishedTime,
+  modifiedTime,
+  locale = 'en_US',
+  siteName = 'Master Astro Template',
+  schema
 } = Astro.props as Props
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString()
-const ogImageURL = ogImage ? new URL(ogImage, Astro.site).toString() : new URL('og-image.png', canonicalURL).toString()
-const faviconURL = new URL('favicon.svg', canonicalURL).toString()
+const ogImageURL = ogImage ? new URL(ogImage, Astro.site).toString() : new URL('/og-image.png', Astro.site).toString()
+
+// Default schema.org structured data
+const defaultSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteName,
+  url: Astro.site?.toString(),
+  description: description,
+  inLanguage: locale.split('_')[0]
+}
+
+const schemaData = schema || defaultSchema
 ---
 
-<!-- Basic -->
+<!-- Essential Meta Tags -->
 <meta charset='utf-8' />
-<meta name='viewport' content='width=device-width, initial-scale=1' />
+<meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover' />
 <meta name='generator' content={Astro.generator} />
-<meta name='robots' content='index, follow' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge' />
 
-<!-- Canonical -->
-<link rel='canonical' href={canonicalURL} />
-<link rel='icon' href={faviconURL} type='image/svg+xml' />
-
-<!-- Title -->
+<!-- SEO Meta Tags -->
 <title>{title}</title>
 <meta name='description' content={description} />
+<meta name='keywords' content={keywords} />
+<meta name='author' content={author} />
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<meta name='googlebot' content='index, follow' />
+<link rel='canonical' href={canonicalURL} />
 
-<!-- Open Graph -->
+<!-- Language and Locale -->
+<meta property='og:locale' content={locale} />
+
+<!-- Favicon and Icons -->
+<link rel='icon' href='/favicon.svg' type='image/svg+xml' />
+<link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
+<link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
+<link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
+<link rel='manifest' href='/site.webmanifest' />
+
+<!-- Open Graph / Facebook -->
 <meta property='og:type' content={type} />
 <meta property='og:url' content={canonicalURL} />
 <meta property='og:title' content={title} />
 <meta property='og:description' content={description} />
 <meta property='og:image' content={ogImageURL} />
+<meta property='og:image:width' content='1200' />
+<meta property='og:image:height' content='630' />
+<meta property='og:image:alt' content={title} />
+<meta property='og:site_name' content={siteName} />
+{publishedTime && <meta property='article:published_time' content={publishedTime} />}
+{modifiedTime && <meta property='article:modified_time' content={modifiedTime} />}
 
 <!-- Twitter -->
 <meta name='twitter:card' content='summary_large_image' />
+<meta name='twitter:site' content={twitterHandle} />
+<meta name='twitter:creator' content={twitterHandle} />
 <meta name='twitter:title' content={title} />
 <meta name='twitter:description' content={description} />
 <meta name='twitter:image' content={ogImageURL} />
+<meta name='twitter:image:alt' content={title} />
+
+<!-- Performance and Resource Hints -->
+<link rel='dns-prefetch' href='https://fonts.googleapis.com' />
+<link rel='preconnect' href='https://fonts.googleapis.com' crossorigin='anonymous' />
+
+<!-- Theme Color -->
+<meta name='theme-color' content='#ffffff' media='(prefers-color-scheme: light)' />
+<meta name='theme-color' content='#0a0a0a' media='(prefers-color-scheme: dark)' />
+
+<!-- Structured Data (JSON-LD) -->
+<script type='application/ld+json' set:html={JSON.stringify(schemaData)} />

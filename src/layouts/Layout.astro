@@ -1,13 +1,38 @@
+---
+import HeadSeo from '@/components/HeadSeo.astro'
+
+interface Props {
+  title?: string
+  description?: string
+  ogImage?: string
+  type?: 'website' | 'article'
+  keywords?: string
+  author?: string
+  twitterHandle?: string
+  publishedTime?: string
+  modifiedTime?: string
+  locale?: string
+  schema?: Record<string, any>
+}
+
+const seoProps = Astro.props as Props
+const lang = seoProps.locale?.split('_')[0] || 'en'
+---
+
 <!doctype html>
-<html lang='en'>
+<html lang={lang}>
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
-    <title>Astro Basics</title>
+    <HeadSeo {...seoProps} />
   </head>
-  <body class='flex min-h-full w-full flex-auto flex-col'>
+  <body class='flex min-h-full w-full flex-auto flex-col antialiased'>
     <slot />
+
+    <!-- Skip to main content for accessibility -->
+    <a
+      href='#main-content'
+      class='sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md'
+    >
+      Skip to main content
+    </a>
   </body>
 </html>
