@@ -5,7 +5,9 @@ import ThemeToggle from '@/components/theme-toggle'
 const ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'Features', href: '#features' },
-  { label: 'Blog', href: '/blog' }
+  { label: 'Blog', href: '/blog' },
+  { label: 'Login', href: '/login' },
+  { label: 'Register', href: '/register' }
 ]
 
 export const Navbar = () => {

@@ -1,4 +1,5 @@
 ---
+import { ClientRouter } from 'astro:transitions'
 import '@/styles/global.css'
 import HeadSeo from '@/components/HeadSeo.astro'
 import { Navbar } from '@/components/blocks/navbar'
@@ -24,6 +25,7 @@ const seoProps = Astro.props as Props
 <html lang='en'>
   <head>
     <HeadSeo {...seoProps} />
+    <ClientRouter />
   </head>
   <body class='flex min-h-screen w-full flex-auto flex-col antialiased'>
     <!-- Skip to main content for accessibility -->

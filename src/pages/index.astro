@@ -44,7 +44,7 @@ const schema = {
         </p>
         <div class='flex flex-col items-center justify-center gap-4 sm:flex-row'>
           <a
-            href='#features'
+            href='/login'
             class='bg-primary hover:bg-primary/90 focus:ring-primary inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-medium text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none'
             aria-label='Explore features of Master Astro Template'
           >
@@ -112,65 +112,71 @@ const schema = {
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class='container mx-auto px-4 py-16 md:py-24' aria-labelledby='cta-heading'>
-      <div class='bg-muted mx-auto max-w-3xl rounded-lg p-8 text-center md:p-12'>
-        <h2 id='cta-heading' class='mb-4 text-3xl font-bold md:text-4xl'>Ready to Build Something Amazing?</h2>
-        <p class='text-muted-foreground mb-8 text-lg'>
-          Start your next project with a solid foundation. Clone the repository and launch your site in minutes.
-        </p>
-        <a
-          href='https://github.com/yourusername/master-astro-template'
-          class='bg-primary hover:bg-primary/90 focus:ring-primary inline-flex items-center justify-center rounded-md px-8 py-4 text-lg font-medium text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none'
-          aria-label='Get started with Master Astro Template'
-          rel='noopener noreferrer'
-          target='_blank'
-        >
-          Get Started Now
-        </a>
-      </div>
+    <section>
+      <img src='/images/4.png' alt='sample girl' />
+      <img src='/images/5.png' alt='sample girl' />
     </section>
-  </main>
 
-  <!-- Footer with semantic HTML -->
-  <footer class='w-full border-t' role='contentinfo'>
-    <div class='container mx-auto px-4 py-8'>
-      <div class='flex flex-col items-center justify-between gap-4 md:flex-row'>
-        <p class='text-muted-foreground text-sm'>
-          © {new Date().getFullYear()} Master Astro Template. Built with <span aria-label='love'>❤️</span> using Astro.
-        </p>
-        <nav aria-label='Footer navigation'>
-          <ul class='flex gap-6'>
-            <li>
-              <a
-                href='/privacy'
-                class='text-muted-foreground hover:text-foreground text-sm transition-colors'
-                aria-label='View privacy policy'
-              >
-                Privacy
-              </a>
-            </li>
-            <li>
-              <a
-                href='/terms'
-                class='text-muted-foreground hover:text-foreground text-sm transition-colors'
-                aria-label='View terms of service'
-              >
-                Terms
-              </a>
-            </li>
-            <li>
-              <a
-                href='/contact'
-                class='text-muted-foreground hover:text-foreground text-sm transition-colors'
-                aria-label='Contact us'
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <!-- CTA Section -->
+    <section class='container mx-auto px-4 py-16 md:py-24' aria-labelledby='cta-heading'></section>
+    <div class='bg-muted mx-auto max-w-3xl rounded-lg p-8 text-center md:p-12'>
+      <h2 id='cta-heading' class='mb-4 text-3xl font-bold md:text-4xl'>Ready to Build Something Amazing?</h2>
+      <p class='text-muted-foreground mb-8 text-lg'>
+        Start your next project with a solid foundation. Clone the repository and launch your site in minutes.
+      </p>
+      <a
+        href='https://github.com/yourusername/master-astro-template'
+        class='bg-primary hover:bg-primary/90 focus:ring-primary inline-flex items-center justify-center rounded-md px-8 py-4 text-lg font-medium text-white transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none'
+        aria-label='Get started with Master Astro Template'
+        rel='noopener noreferrer'
+        target='_blank'
+      >
+        Get Started Now
+      </a>
     </div>
-  </footer>
+    <img src='/images/1.png' alt='sample girl' loading='lazy' />
+    <img src='/images/2.png' alt='sample girl' loading='lazy' />
+  </main>
 </Layout>
+
+<!-- Footer with semantic HTML -->
+<footer class='w-full border-t' role='contentinfo'>
+  <div class='container mx-auto px-4 py-8'>
+    <div class='flex flex-col items-center justify-between gap-4 md:flex-row'>
+      <p class='text-muted-foreground text-sm'>
+        © {new Date().getFullYear()} Master Astro Template. Built with <span aria-label='love'>❤️</span> using Astro.
+      </p>
+      <nav aria-label='Footer navigation'>
+        <ul class='flex gap-6'>
+          <li>
+            <a
+              href='/privacy'
+              class='text-muted-foreground hover:text-foreground text-sm transition-colors'
+              aria-label='View privacy policy'
+            >
+              Privacy
+            </a>
+          </li>
+          <li>
+            <a
+              href='/terms'
+              class='text-muted-foreground hover:text-foreground text-sm transition-colors'
+              aria-label='View terms of service'
+            >
+              Terms
+            </a>
+          </li>
+          <li>
+            <a
+              href='/contact'
+              class='text-muted-foreground hover:text-foreground text-sm transition-colors'
+              aria-label='Contact us'
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
