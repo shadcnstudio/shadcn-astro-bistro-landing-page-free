@@ -64,15 +64,15 @@
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 
 # Image assets in public folder
-/assets/*.jpg
+/imaegs/**/*.jpg
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 
-/assets/*.png
+/images/**/*.jpg
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
-
-/assets/*.webp
+/images/**/*.png
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
-
+/images/**/*.webp
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 # Fonts - immutable, very long cache
 /*.woff
   Cache-Control: public, max-age=31536000, immutable
@@ -90,10 +90,10 @@
   Cache-Control: public, max-age=31536000, immutable
 
 # Static files
-/favicon.ico
+/favicon/favicon.ico
   Cache-Control: public, max-age=604800
 
-/*.ico
+/favicon/*.ico
   Cache-Control: public, max-age=604800
 
 /robots.txt
