@@ -28,7 +28,7 @@ export const Header = () => {
           <ThemeToggle />
           <ul className='flex gap-6'>
             {ITEMS.map(item => (
-              <li>
+              <li key={item.href}>
                 <a
                   href={item.href}
                   className='text-muted-foreground hover:text-foreground text-base font-medium transition-colors'
