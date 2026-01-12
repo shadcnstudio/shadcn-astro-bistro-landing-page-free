@@ -10,8 +10,7 @@ export const SITE_URL = 'https://shadcnstudio.com/'
 
 export const SITE_METADATA = {
   title: {
-    default: 'shadcn Studio - Modern Astro Template',
-    template: '%s | shadcn Studio'
+    default: 'shadcn Studio - Modern Astro Template'
   },
   description:
     'A professional Astro template built with shadcn/ui, Tailwind CSS & React. Optimized for performance and SEO. Open source - MIT License.',
