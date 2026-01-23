@@ -13,13 +13,11 @@ export async function GET(context) {
     console.log('No blog posts found, generating empty RSS feed')
   }
 
-  const publishedPosts = posts.filter(post => !post.data.draft)
-
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     site: context.site,
-    items: publishedPosts.map(post => ({
+    items: posts.map(post => ({
       title: post.data.title,
       description: post.data.description,
       pubDate: post.data.pubDate,
