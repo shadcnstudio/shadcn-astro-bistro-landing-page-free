@@ -1,19 +1,19 @@
 // Site Configuration
 // Centralized configuration for site metadata, SEO, and branding
 
-export const SITE_TITLE = 'shadcn Studio - Modern Astro Template'
+export const SITE_TITLE = 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio'
 export const SITE_DESCRIPTION =
-  'Build lightning-fast, SEO-optimized websites with our professional Astro template featuring shadcn/ui components, Tailwind CSS, and modern best practices.'
+  'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.'
 
-export const GITHUB_URL = 'https://github.com/yourusername/master-shadcn-astro'
+export const GITHUB_URL = 'https://github.com/yourusername/shadcn-astro-bistro-landing-page'
 export const SITE_URL = 'https://shadcnstudio.com/'
 
 export const SITE_METADATA = {
   title: {
-    default: 'shadcn Studio - Modern Astro Template'
+    default: 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio'
   },
   description:
-    'A professional Astro template built with shadcn/ui, Tailwind CSS & React. Optimized for performance and SEO. Open source - MIT License.',
+    'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
   keywords: [
     'Astro',
     'astro template',
@@ -56,15 +56,15 @@ export const SITE_METADATA = {
     type: 'website',
     locale: 'en_US',
     siteName: 'shadcn Studio',
-    title: 'shadcn Studio - Modern Astro Template',
+    title: 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio',
     description:
-      'A professional Astro template built with shadcn/ui, Tailwind CSS & React. Optimized for performance and SEO.',
+      'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'shadcn Studio - Modern Astro Template',
+        alt: 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio',
         type: 'image/png'
       }
     ]
@@ -73,9 +73,9 @@ export const SITE_METADATA = {
     card: 'summary_large_image',
     site: '@shadcnstudio',
     creator: '@shadcnstudio',
-    title: 'shadcn Studio - Modern Astro Template',
+    title: 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio',
     description:
-      'A professional Astro template built with shadcn/ui, Tailwind CSS & React. Optimized for performance and SEO.',
+      'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
     images: ['/images/og-image.png']
   },
   verification: {

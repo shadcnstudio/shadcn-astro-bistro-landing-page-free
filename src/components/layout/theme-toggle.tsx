@@ -31,7 +31,7 @@ function ThemeToggle() {
     <Button
       variant='outline'
       size='icon'
-      className='relative'
+      className='relative rounded-full'
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
     >
       <MoonStarIcon className='size-4 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90' />

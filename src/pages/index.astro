@@ -1,12 +1,26 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import HeroSectionPage from '@/components/blocks/hero-section/hero-section'
+import PopularDishes from '@/components/blocks/popular-dishes/popular-dishes'
+import AboutUs from '@/components/blocks/about-us-section/about-us-page'
+import Testimonials from '@/components/blocks/testimonials-section/testimonials-section'
+import NewItems from '@/components/blocks/new-items-section/new-items'
+import ContactUs from '@/components/blocks/contact-us-section/contact-us-page'
+import Offers from '@/components/blocks/offers-section/offers-section'
+
+import { menudata } from '@/assets/data/hero'
+import { popularDishes } from '@/assets/data/popular-dishes'
+import { stats } from '@/assets/data/about-us'
+import { testimonials } from '@/assets/data/testimonials'
+import { newItems } from '@/assets/data/new-items'
+import { contactInfo } from '@/assets/data/contact-us'
+import { GalleryImage } from '@/assets/data/offers'
 
 // Page-specific SEO configuration
-const pageTitle = 'Master Astro Template - Build Modern, Fast Websites'
+const pageTitle = ''
 const pageDescription =
-  'Create lightning-fast, SEO-optimized websites with our Astro template featuring shadcn/ui components and Tailwind CSS. Perfect for developers building modern web applications.'
-const pageKeywords =
-  'astro template, shadcn ui, tailwind css, react components, seo optimized, web development, static site generator, modern web apps'
+  'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.'
+const pageKeywords = 'astro template, shadcn ui, tailwind css, react components, restaurant'
 
 // Structured data for better SEO
 const schema = {
@@ -29,5 +43,11 @@ const schema = {
 ---
 
 <Layout title={pageTitle} description={pageDescription} keywords={pageKeywords} schema={schema}>
-  <!--  All Sections -->
+  <HeroSectionPage menudata={menudata} client:load />
+  <PopularDishes popularDishes={popularDishes} client:load />
+  <AboutUs stats={stats} />
+  <Testimonials testimonials={testimonials} client:load />
+  <NewItems newItems={newItems} />
+  <ContactUs contactInfo={contactInfo} />
+  <Offers galleryImage={GalleryImage} />
 </Layout>

@@ -4,8 +4,22 @@
 
 All notable changes to this template will be documented in this file
 
-## v1.0.0 (YYYY-MM-DD)
+## v1.0.0 (2026-01-30)
 
 ### Added
 
-- Initial Release
+- Initial release
+- Contains following sections
+  - Header
+  - Hero Section
+  - Popular Dishes
+  - About Us
+  - Testimonials
+  - New Items
+  - Contact Us
+  - Offers
+  - Footer
+- Responsive Design
+- Dark/Light Mode Toggle
+- Smooth Scrolling
+- SEO Optimization
