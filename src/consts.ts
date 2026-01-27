@@ -55,7 +55,7 @@ export const SITE_METADATA = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'shadcn Studio',
+    siteName: 'Bistro',
     title: 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio',
     description:
       'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
