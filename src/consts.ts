@@ -1,7 +1,7 @@
 // Site Configuration
 // Centralized configuration for site metadata, SEO, and branding
 
-export const SITE_TITLE = 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio'
+export const SITE_TITLE = 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio'
 export const SITE_DESCRIPTION =
   'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.'
 
@@ -10,7 +10,7 @@ export const SITE_URL = 'https://shadcnstudio.com/'
 
 export const SITE_METADATA = {
   title: {
-    default: 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio'
+    default: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio'
   },
   description:
     'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
@@ -56,7 +56,7 @@ export const SITE_METADATA = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Bistro',
-    title: 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio',
+    title: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio',
     description:
       'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
     images: [
@@ -64,7 +64,7 @@ export const SITE_METADATA = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio',
+        alt: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio',
         type: 'image/png'
       }
     ]
@@ -73,7 +73,7 @@ export const SITE_METADATA = {
     card: 'summary_large_image',
     site: '@shadcnstudio',
     creator: '@shadcnstudio',
-    title: 'Demo:Bistro - Restaurant Landing Page | Shadcn Studio',
+    title: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio',
     description:
       'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
     images: ['/images/og-image.png']
