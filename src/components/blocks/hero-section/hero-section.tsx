@@ -155,7 +155,7 @@ const HeroSection = ({ menudata }: { menudata: MenuData[] }) => {
               {menudata.map((item, index) => (
                 <CarouselItem
                   key={item.id}
-                  className={cn('basis-1/2 cursor-pointer sm:basis-1/3 md:basis-1/4 lg:basis-1/3 xl:basis-1/4')}
+                  className={cn('basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/3 xl:basis-1/4')}
                   onClick={() => handleThumbClick(index)}
                 >
                   <div className='relative flex h-33 items-center justify-center'>

@@ -74,7 +74,7 @@ const MenuDropdown = ({ trigger, navigationData, activeSection, align = 'start' 
                     scrollToSection(sectionId)
                   }}
                   className={cn(
-                    'cursor-pointer transition-colors duration-200',
+                    'transition-colors duration-200',
                     'hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary',
                     isActive ? 'bg-primary/10 text-primary font-medium' : 'text-foreground'
                   )}

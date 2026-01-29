@@ -71,7 +71,7 @@ const MenuNavigation = ({ navigationData, activeSection, className }: MenuNaviga
                   }}
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    'cursor-pointer rounded-full bg-transparent px-3 py-1.5 text-base! font-normal transition-colors duration-200',
+                    'rounded-full bg-transparent px-3 py-1.5 text-base! font-normal transition-colors duration-200',
                     'hover:text-primary hover:bg-primary/5 dark:hover:bg-primary/10',
                     'focus:text-primary focus:bg-primary/5 dark:focus:bg-primary/10',
                     isActive ? 'text-primary bg-primary/5 dark:bg-primary/10' : 'text-muted-foreground'
