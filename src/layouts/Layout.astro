@@ -8,6 +8,8 @@ import Header from '@/components/layout/header'
 import Footer from '@/components/layout/footer'
 import { navigationData } from '@/assets/data/header'
 
+import DownloadButton from '@/components/layout/Download'
+
 interface Props {
   title?: string
   description?: string
@@ -74,6 +76,8 @@ const seoProps = Astro.props as Props
       <main class='flex flex-col pt-17.5 *:scroll-mt-16'><slot /></main>
 
       <Footer client:load />
+
+      <DownloadButton />
     </div>
   </body>
 </html>
